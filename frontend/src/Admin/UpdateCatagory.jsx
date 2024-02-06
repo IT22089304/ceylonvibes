@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 const AddCatagory = () => {
 
     const { id } = useParams();
+    const [ID, setID] = useState('');
     const [name, setName] = useState('');
     const [image, setImage] = useState('');
     const [files, setFiles] = useState(null);
@@ -23,6 +24,7 @@ const AddCatagory = () => {
     const fetchCatagory = async () => {
         try {
             const response = await axios.get(`/api/Catagories/${id}`);
+            setID(response.data.data[0]._id);
             setName(response.data.data[0].name);
             setImage(response.data.data[0].image);
         } catch (error) {
@@ -44,6 +46,7 @@ const AddCatagory = () => {
         const formdata = new FormData()
         formdata.append('file', files[0])
         formdata.append('name', name);
+        formdata.append('id', ID);
         try {
             const response = await axios.put(`http://localhost:5010/upload/${id}`, formdata, {
                 headers: {
@@ -52,7 +55,19 @@ const AddCatagory = () => {
             });
             console.log(response);
         } catch (error) {
-            console.error("Error adding category:", error);
+            if (error.response) {
+                // The request was made and the server responded with a status code
+                // that falls out of the range of 2xx
+                console.error("Error status:", error.response.status);
+                console.error("Error data:", error.response.data);
+            } else if (error.request) {
+                // The request was made but no response was received
+                console.error("No response received:", error.request);
+            } else {
+                // Something happened in setting up the request that triggered an Error
+                console.error("Error message:", error.message);
+            }
+            console.error("Error config:", error.config);
         }
     }
 

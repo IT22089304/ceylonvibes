@@ -4,7 +4,6 @@ import cors from 'cors';
 import catagoryRoutes from './routes/storeRouter.js'
 import React from 'react';
 import mongoose from 'mongoose';
-import { port} from './config.js';
 import multer from 'multer'
 import path from 'path';
 import { Catagory, Nuts } from './models/storeModel.js';
@@ -71,12 +70,13 @@ app.post('/upload', upload.single('file'), (req, res) => {
 })
 
 app.put('/upload/:id', upload.single('file'), (req, res) => {
-  Catagory.update(
+  const id = req.params.id; // Use req.params to access route parameters
+  Catagory.findByIdAndUpdate( id,
     { name: req.body.name, image: req.file.filename },
-    { where: { id: req.params.id } }
+    { new: true } // This option returns the updated document
   )
   .then(result => res.json(result))
-  .catch(err => res.log(err))
+  .catch(err => console.log(err)) // Use console.log to log errors
 });
 
 app.get('/getImage', (req, res) => {
