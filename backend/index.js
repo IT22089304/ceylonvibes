@@ -1,15 +1,23 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import { port, mongoDBURL } from './config.js';
 import catagoryRoutes from './routes/storeRouter.js'
 import React from 'react';
 import mongoose from 'mongoose';
+import { port} from './config.js';
 import multer from 'multer'
 import path from 'path';
 import { Catagory, Nuts } from './models/storeModel.js';
 
+import * as dotenv from 'dotenv'
+dotenv.config()
+
+const MONGODB_URL = process.env.MONGODB_URL
+const mongoDBURL = mongoose.connection;
+mongoose.connect(MONGODB_URL)
+
 const app = express();
+export const port = 5010;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -32,7 +40,6 @@ mongoDBURL.once('open', () => {
 //       res.status(500).json({ message: 'Server error' });
 //     });
 // });
-
 
 app.use('/', catagoryRoutes)
 // Add routes for CRUD operations for users and products here
