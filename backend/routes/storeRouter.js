@@ -5,6 +5,7 @@ import { Nuts, Snacks, Sweetners } from '../models/storeModel.js';
 const router = express.Router();
 
 // Routes for Catagories
+// for Read 
 router.get('/api/catagories', (req, res) => {
   Catagory.find().then(item => {
     console.log(item);
@@ -15,6 +16,8 @@ router.get('/api/catagories', (req, res) => {
       res.status(500).json({ message: 'Server error' });
     });
 });
+
+// For Read part odf Update
 router.get('/api/catagories/:id', (req, res) => {
   const { id } = req.params
   Catagory.find({_id:id}).then(item => {

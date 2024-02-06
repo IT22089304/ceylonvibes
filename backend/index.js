@@ -70,6 +70,15 @@ app.post('/upload', upload.single('file'), (req, res) => {
   .catch(err => res.log(err))
 })
 
+app.put('/upload/:id', upload.single('file'), (req, res) => {
+  Catagory.update(
+    { name: req.body.name, image: req.file.filename },
+    { where: { id: req.params.id } }
+  )
+  .then(result => res.json(result))
+  .catch(err => res.log(err))
+});
+
 app.get('/getImage', (req, res) => {
   Catagory.find()
   .then(Catagory => res.json(Catagory))

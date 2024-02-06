@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Admin = () => {
     axios.defaults.baseURL = `http://localhost:5010`;
@@ -15,9 +15,16 @@ const Admin = () => {
         }
     };
 
+    const Navigate = useNavigate();
+
+    const updateCatagory = (id) => {
+        Navigate(`/updateCatagory/${id}`)
+    }
+
     useEffect(() => {
         fetchItems()
     }, [])
+
 
     return (
         <div>
@@ -50,7 +57,7 @@ const Admin = () => {
                                         </th>
                                         <th>
                                             <Link to='/AddCatagory' className='border p-[4px] rounded-[7px]'>Add a Catagory</Link>
-                                            <Link className='border p-[4px] rounded-[7px]'>Add a Catagory</Link>
+                                            <button onClick={() => updateCatagory(items._id)} className='border p-[4px] rounded-[7px]'>Update Catagory</button>
                                         </th>
                                     </tr>
                                 )) :

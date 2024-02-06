@@ -13,6 +13,7 @@ import Admin from "./Admin/Admin.jsx";
 import AddCatagory from "./Admin/AddCatagory.jsx";
 import Image from "./components/Organic Items/Content/image.jsx";
 import "./App.css"
+import UpdateCatagory from "./Admin/UpdateCatagory.jsx";
 
 const App = () => {
   console.disableYellowBox = true;
@@ -77,11 +78,13 @@ const App = () => {
 
   // for admin panel
 
+  
+
 
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Shop catagories={catagories} fetchCatagories={fetchCatagories} offers={offers} fetchOffers={fetchOffers}/>} /> */}
+        {/* <Route path="/" element={<Shop catagories={catagories} fetchCatagories={fetchCatagories} offers={offers} fetchOffers={fetchOffers}/>}/> */}
         <Route path="/reports" element={<Reports />} />
         <Route path="/products" element={<Products />} />
         <Route
@@ -92,6 +95,7 @@ const App = () => {
         for admin panel
         <Route path="/" element={<Admin/>} />
         <Route path="/addCatagory" element={<AddCatagory fetchCatagories={fetchCatagories}/>} />
+        <Route path="/updateCatagory/:id" element={<UpdateCatagory fetchCatagories={fetchCatagories}/>} />
       </Routes>
     </BrowserRouter>
   );
