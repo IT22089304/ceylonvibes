@@ -1,17 +1,15 @@
-import React from 'react'
-import SPALOGO from '../components/SPA/SPALOGO'
-import Footer from '../components/Footer/Footer'
-import SPAHOMEPAGE from '../components/SPA/SPAHOMEPAGE'
-import Buttons from "../components/Header/Buttons";
-import SearchBar from "../components/Header/SearchBar";
-import Navbar from "../components/Header/Navbar";
+import React from "react";
+import SPALOGOCON from "../../components/SPA/SPALOGOCON";
+import Buttons from "../../components/Header/Buttons";
+import SearchBar from "../../components/Header/SearchBar";
+import Navbar from "../../components/Header/Navbar";
+import Footer from "../../components/Footer/Footer";
+import ServiceConfirm from "../../components/SPA/ServiceConfirm";
 
-
-export default function SpaHomepage(){
-    return(
-        <div>
-            
-            <div>
+function ServiceConfirmPage() {
+  return (
+    <div>
+      <div>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -56,24 +54,24 @@ export default function SpaHomepage(){
           rel="stylesheet"
         />
       </div>
-      <div className="bg-yellow h-[114px] w-[100%] fixed z-20">
-        <SPALOGO />
+      <div className="bg-[#A7F3D0] h-[114px] w-[100%] fixed z-20">
+        <SPALOGOCON/>
         <Buttons />
         <SearchBar />
         <Navbar />
       </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            
-            
-            <SPAHOMEPAGE/>
-            <br></br>
-            
-            <br></br>
-            <Footer/>
-        </div>
-        
-    )
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      
+      <ServiceConfirm />
+      <br></br>
+      <br></br>
+      <Footer />
+    </div>
+  );
 }
+
+export default ServiceConfirmPage;

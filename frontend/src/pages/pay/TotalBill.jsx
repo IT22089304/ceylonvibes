@@ -30,6 +30,8 @@ function TotalBill() {
         <br />
         <br />
         <br />
+        <br />
+        <br />
         <Bill items={items} /> {/* Pass items array to Bill component */}
         <br />
         <br />

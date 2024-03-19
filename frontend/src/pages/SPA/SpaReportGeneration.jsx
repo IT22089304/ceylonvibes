@@ -1,15 +1,17 @@
-import React from "react";
-import SPALOGOCON from "../components/SPA/SPALOGOCON";
-import Buttons from "../components/Header/Buttons";
-import SearchBar from "../components/Header/SearchBar";
-import Navbar from "../components/Header/Navbar";
-import Footer from "../components/Footer/Footer";
-import ServiceConfirm from "../components/SPA/ServiceConfirm";
+import React from 'react'
+import SPALOGOADMIN from '../../components/SPA/SPALOGOADMIN'
+import Footer from '../../components/Footer/Footer'
+import ReportGeneration from '../../components/SPA/SPArepGen';
+import Buttons from "../../components/Header/Buttons";
+import SearchBar from "../../components/Header/SearchBar";
+import Navbar from "../../components/Header/Navbar";
 
-function ServiceConfirmPage() {
-  return (
-    <div>
-      <div>
+
+export default function SPAREPORTGENERATIONPAGE(){
+    return(
+        <div>
+            
+            <div>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -54,24 +56,23 @@ function ServiceConfirmPage() {
           rel="stylesheet"
         />
       </div>
-      <div className="bg-[#A7F3D0] h-[114px] w-[100%] fixed z-20">
-        <SPALOGOCON/>
+      <div className="bg-yellow h-[114px] w-[100%] fixed z-20">
+        <SPALOGOADMIN />
         <Buttons />
         <SearchBar />
         <Navbar />
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      
-      <ServiceConfirm />
-      <br></br>
-      <br></br>
-      <Footer />
-    </div>
-  );
-}
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
 
-export default ServiceConfirmPage;
+            <ReportGeneration/>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Footer/>
+        </div>
+        
+    )
+}

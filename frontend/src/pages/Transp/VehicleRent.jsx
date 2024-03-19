@@ -1,14 +1,16 @@
 import React from "react";
-import SPALOGOMENU from "../components/SPA/SPALOGOMENU";
-import Buttons from "../components/Header/Buttons";
-import SearchBar from "../components/Header/SearchBar";
-import Navbar from "../components/Header/Navbar";
-import Footer from "../components/Footer/Footer";
-import AyurvedicSpaMenu from "../components/SPA/AyurvedicSpaMenu";
+import Buttons from "../../components/Header/Buttons";
+import SearchBar from "../../components/Header/SearchBar";
+import Navbar from "../../components/Header/Navbar";
+import Footer from "../../components/Footer/Footer";
+import Descript from "../../components/rental/Descript";
+import LogoRentals from "../../components/rental/logoRentals";
+import TimeSelector from "../../components/rental/TimeSelector";
 
-function AyurvedicPage() {
+
+function VehicalRental() {
   return (
-    <div>
+    <div className="bg-[#c7aa6d]">
       <div>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,20 +56,26 @@ function AyurvedicPage() {
           rel="stylesheet"
         />
       </div>
-      <div className="bg-[#A7F3D0] h-[114px] w-[100%] fixed z-20">
-        <SPALOGOMENU />
+      <div className="bg-yellow h-[114px] w-[100%] fixed z-20">
+        <LogoRentals />
         <Buttons />
         <SearchBar />
         <Navbar />
       </div>
       <br></br>
+      <br></br>
+
+      <br></br>
+      <br></br>
+      <br></br>
       
-      <AyurvedicSpaMenu />
-      <br></br>
-      <br></br>
+      <div>
+        <Descript/>
+        
+      </div>
       <Footer />
     </div>
   );
 }
 
-export default AyurvedicPage;
+export default VehicalRental;

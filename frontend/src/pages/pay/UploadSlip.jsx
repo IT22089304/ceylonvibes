@@ -18,11 +18,21 @@ function UploadSlip() {
 
       {/* Rest of the content with another color */}
       <div className='bg-[#879d62]'>
+      <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       
         
       <Slip/>
-        {/* Add other components as needed */}
-      </div>
+      <br></br>
+      
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+            </div>
 
   <Footer />
     </div>

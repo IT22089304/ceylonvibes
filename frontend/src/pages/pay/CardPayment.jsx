@@ -18,15 +18,13 @@ function CardPayment() {
       {/* Rest of the content with another color */}
       <div className='bg-[#B4F8C8]'>
       <br></br>
-        <br></br>
+
         <br></br>
         
       <Card/>
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        <br />
         {/* Add other components as needed */}
       </div>
 

@@ -36,6 +36,12 @@ const HomePageBody = () => {
       <div className="w-64 h-64 bg-[#41C9E2] m-4 flex justify-center items-center">
         <span className="text-black text-3xl">Events</span>
       </div>
+       {/* Events */}
+       <Link to="/noti">
+       <div className="w-64 h-64 bg-[#41C9E2] m-4 flex justify-center items-center">
+        <span className="text-black text-3xl">Notifications</span>
+      </div>
+      </Link>
     </div>
   );
 };

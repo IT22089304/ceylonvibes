@@ -1,17 +1,15 @@
-import React from 'react'
-import SPALOGOADMIN from '../components/SPA/SPALOGOADMIN'
-import Footer from '../components/Footer/Footer'
-import ReportGeneration from '../components/SPA/SPArepGen';
-import Buttons from "../components/Header/Buttons";
-import SearchBar from "../components/Header/SearchBar";
-import Navbar from "../components/Header/Navbar";
+import React from "react";
+import SPALOGOMENU from "../../components/SPA/SPALOGOMENU";
+import Buttons from "../../components/Header/Buttons";
+import SearchBar from "../../components/Header/SearchBar";
+import Navbar from "../../components/Header/Navbar";
+import Footer from "../../components/Footer/Footer";
+import AyurvedicSpaMenu from "../../components/SPA/AyurvedicSpaMenu";
 
-
-export default function SPAREPORTGENERATIONPAGE(){
-    return(
-        <div>
-            
-            <div>
+function AyurvedicPage() {
+  return (
+    <div>
+      <div>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -56,23 +54,20 @@ export default function SPAREPORTGENERATIONPAGE(){
           rel="stylesheet"
         />
       </div>
-      <div className="bg-yellow h-[114px] w-[100%] fixed z-20">
-        <SPALOGOADMIN />
+      <div className="bg-[#A7F3D0] h-[114px] w-[100%] fixed z-20">
+        <SPALOGOMENU />
         <Buttons />
         <SearchBar />
         <Navbar />
       </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-
-            <ReportGeneration/>
-            <br></br>
-            <br></br>
-            <br></br>
-            <Footer/>
-        </div>
-        
-    )
+      <br></br>
+      
+      <AyurvedicSpaMenu />
+      <br></br>
+      <br></br>
+      <Footer />
+    </div>
+  );
 }
+
+export default AyurvedicPage;

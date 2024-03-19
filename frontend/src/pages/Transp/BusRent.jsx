@@ -1,12 +1,12 @@
 import React from "react";
-import Buttons from "../components/Header/Buttons";
-import SearchBar from "../components/Header/SearchBar";
-import Navbar from "../components/Header/Navbar";
-import Footer from "../components/Footer/Footer";
-import Cars from "../components/rental/Cars";
-import LogoRentals from "../components/rental/logoRentals";
+import Buttons from "../../components/Header/Buttons";
+import SearchBar from "../../components/Header/SearchBar";
+import Navbar from "../../components/Header/Navbar";
+import Footer from "../../components/Footer/Footer";
+import Bus from "../../components/rental/Bus";
+import LogoRentals from "../../components/rental/logoRentals";
 
-function CarRental() {
+function BusRental() {
   return (
     <div className="bg-[#c7aa6d]">
       <div>
@@ -67,16 +67,16 @@ function CarRental() {
       <br></br>
       <br></br>
       <div className="flex justify-center mt-8"> {/* Centering the buttons */}
-        <button className='bg-[#7b4949] font-Barlow mr-4 mt-4 rounded-md h-10 w-24 text-black text-lg'>Car</button>
+        <button className='bg-[#e8b849] font-Barlow mr-4 mt-4 rounded-md h-10 w-24 text-black text-lg'>Car</button>
         <button className='bg-[#e8b849] font-Barlow mr-4 mt-4 rounded-md h-10 w-24 text-black text-lg'>Van</button>
         <button className='bg-[#e8b849] font-Barlow mr-4 mt-4 rounded-md h-10 w-24 text-black text-lg'>Bus</button>
       </div>
       <div>
-        <Cars/>
+        <Bus/>
       </div>
       <Footer />
     </div>
   );
 }
 
-export default CarRental;
+export default BusRental;

@@ -1,15 +1,17 @@
-import React from "react";
-import SPALOGOMENUEDIT from "../components/SPA/SPALOGOMENUEDIT";
-import Buttons from "../components/Header/Buttons";
-import SearchBar from "../components/Header/SearchBar";
-import Navbar from "../components/Header/Navbar";
-import Footer from "../components/Footer/Footer";
-import SPAEDITMENU from "../components/SPA/SPAMENUEDIT";
+import React from 'react'
+import SPALOGOADMIN from '../../components/SPA/SPALOGOADMIN'
+import Footer from '../../components/Footer/Footer'
+import SpaAdminHP from '../../components/SPA/SPAADMINHP'
+import Buttons from "../../components/Header/Buttons";
+import SearchBar from "../../components/Header/SearchBar";
+import Navbar from "../../components/Header/Navbar";
 
-function MenuEditPage() {
-  return (
-    <div>
-      <div>
+
+export default function SPAADMINHOMEPAGE(){
+    return(
+        <div>
+            
+            <div>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -54,24 +56,24 @@ function MenuEditPage() {
           rel="stylesheet"
         />
       </div>
-      <div className="bg-[#A7F3D0] h-[114px] w-[100%] fixed z-20">
-        <SPALOGOMENUEDIT/>
+      <div className="bg-yellow h-[114px] w-[100%] fixed z-20">
+        <SPALOGOADMIN />
         <Buttons />
         <SearchBar />
         <Navbar />
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      
-      <SPAEDITMENU />
-      <br></br>
-      <br></br>
-      <Footer />
-    </div>
-  );
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            
+            
+            <SpaAdminHP/>
+            <br></br>
+            
+            <br></br>
+            <Footer/>
+        </div>
+        
+    )
 }
-
-export default MenuEditPage;

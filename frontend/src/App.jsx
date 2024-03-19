@@ -30,15 +30,15 @@ import ArtHistorical from "./pages/Art/ArtHistorical.jsx";
 import PaymentSuccess from "./pages/pay/Paymentsucess.jsx";
 import SlipUploaded from "./pages/pay/SlipUploaded.jsx";
 import Homepagee from "./pages/Hom/Homepagee.jsx";
-import SpaHomepage from "./pages/SpaHomepage.jsx";
-import AyurvedicPage from "./pages/AyurvedicSPAM.jsx";
-import ClassicalPage from "./pages/AyurvedicSPAC.jsx";
-import MenuEditPage from "./pages/SpaMenuEdit.jsx";
-import ClassicalEditPage from "./pages/ClassicalSpaEdit.jsx";
-import SpaAppointmentPage from "./pages/SpaServiceAppointment.jsx";
-import ServiceConfirmPage from "./pages/SpaServiceConfirm.jsx";
-import SPAADMINHOMEPAGE from "./pages/SpaAdminHomepage.jsx";
-import SPAREPORTGENERATIONPAGE from "./pages/SpaReportGeneration.jsx";
+import SpaHomepage from "./pages/SPA/SpaHomepage.jsx";
+import AyurvedicPage from "./pages/SPA/AyurvedicSPAM.jsx";
+import ClassicalPage from "./pages/SPA/AyurvedicSPAC.jsx";
+import MenuEditPage from "./pages/SPA/SpaMenuEdit.jsx";
+import ClassicalEditPage from "./pages/SPA/ClassicalSpaEdit.jsx";
+import SpaAppointmentPage from "./pages/SPA/SpaServiceAppointment.jsx";
+import ServiceConfirmPage from "./pages/SPA/SpaServiceConfirm.jsx";
+import SPAADMINHOMEPAGE from "./pages/SPA/SpaAdminHomepage.jsx";
+import SPAREPORTGENERATIONPAGE from "./pages/SPA/SpaReportGeneration.jsx";
 
 const App = () => {
   console.disableYellowBox = true;
@@ -144,8 +144,8 @@ console.log(cart)
     <Route path="/homee" element={<Homepagee />} /> 
     <Route path="/pay" element={<TotalBill />} /> 
     <Route path="/SPAhome" element={<SpaHomepage />} /> 
-
-     {/* User-side routes */}
+    <Route path="/noti" element={<Notification />} /> 
+     
      <Route path="/" element={<SpaHomepage />} />
       <Route path="/ayurvedic-spa-menu" element={<AyurvedicPage />} />
       <Route path="/ayurvedic-spa-classical" element={<ClassicalPage />} />

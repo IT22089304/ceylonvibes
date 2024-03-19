@@ -1,14 +1,14 @@
 import React from "react";
-import Buttons from "../components/Header/Buttons";
-import SearchBar from "../components/Header/SearchBar";
-import Navbar from "../components/Header/Navbar";
-import Footer from "../components/Footer/Footer";
-import Vans from "../components/rental/Van";
-import LogoRentals from "../components/rental/logoRentals";
+import SPALOGOCLAEDIT from "../../components/SPA/SPALOGOCLAEDIT";
+import Buttons from "../../components/Header/Buttons";
+import SearchBar from "../../components/Header/SearchBar";
+import Navbar from "../../components/Header/Navbar";
+import Footer from "../../components/Footer/Footer";
+import CLASSICALEDIT from "../../components/SPA/CLASSICALEDIT";
 
-function VanRental() {
+function ClassicalEditPage() {
   return (
-    <div className="bg-[#c7aa6d]">
+    <div>
       <div>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,29 +54,24 @@ function VanRental() {
           rel="stylesheet"
         />
       </div>
-      <div className="bg-yellow h-[114px] w-[100%] fixed z-20">
-        <LogoRentals />
+      <div className="bg-[#A7F3D0] h-[114px] w-[100%] fixed z-20">
+        <SPALOGOCLAEDIT/>
         <Buttons />
         <SearchBar />
         <Navbar />
       </div>
       <br></br>
       <br></br>
-
       <br></br>
       <br></br>
       <br></br>
-      <div className="flex justify-center mt-8"> {/* Centering the buttons */}
-        <button className='bg-[#e8b849] font-Barlow mr-4 mt-4 rounded-md h-10 w-24 text-black text-lg'>Car</button>
-        <button className='bg-[#ff0000] font-Barlow mr-4 mt-4 rounded-md h-10 w-24 text-black text-lg'>Van</button>
-        <button className='bg-[#e8b849] font-Barlow mr-4 mt-4 rounded-md h-10 w-24 text-black text-lg'>Bus</button>
-      </div>
-      <div>
-        <Vans />
-      </div>
+      
+      <CLASSICALEDIT />
+      <br></br>
+      <br></br>
       <Footer />
     </div>
   );
 }
 
-export default VanRental;
+export default ClassicalEditPage;

@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 
 const PaymentSuccess = () => {
   return (
-    <div className="bg-blue-100 min-h-screen flex justify-center items-center">
-      <div className="bg-white rounded-lg shadow-md p-8 max-w-md w-full">
-        <h2 className="text-teal-500 text-2xl font-bold mb-4">Payment Successful</h2>
-        <p className="text-gray-700">Your payment was successful. Thank you for your purchase!</p>
+    <div className="bg-[#7bb7f7] min-h-screen flex justify-center items-center">
+      <div className="bg-white rounded-lg shadow-md p-8 w-[1200px] h-[500px] flex flex-col justify-center items-center text-center">
+        <h2 className="text-teal-500 text-5xl font-bold mb-4">Payment Successful</h2>
+        <p className="text-gray-700 text-3xl">Your payment was successful. Thank you for your purchase!</p>
         <Link to="/home">
+          <br></br>
           <button
             id="returnHomeButton"
-            className="mt-4 bg-[#4CCD99] hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
+            className="mt-4 bg-[#4CCD99] w-[200px] h-[80px] text-2xl hover:bg-[#72c737] text-white font-semibold py-2 px-4 rounded"
           >
             Return to Home
           </button>

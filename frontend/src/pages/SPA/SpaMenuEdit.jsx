@@ -1,12 +1,12 @@
 import React from "react";
-import SPALOGOAPP from "../components/SPA/SPALOGOAPP";
-import Buttons from "../components/Header/Buttons";
-import SearchBar from "../components/Header/SearchBar";
-import Navbar from "../components/Header/Navbar";
-import Footer from "../components/Footer/Footer";
-import Appointment from "../components/SPA/Appointment";
+import SPALOGOMENUEDIT from "../../components/SPA/SPALOGOMENUEDIT";
+import Buttons from "../../components/Header/Buttons";
+import SearchBar from "../../components/Header/SearchBar";
+import Navbar from "../../components/Header/Navbar";
+import Footer from "../../components/Footer/Footer";
+import SPAEDITMENU from "../../components/SPA/SPAMENUEDIT";
 
-function SpaAppointmentPage() {
+function MenuEditPage() {
   return (
     <div>
       <div>
@@ -55,7 +55,7 @@ function SpaAppointmentPage() {
         />
       </div>
       <div className="bg-[#A7F3D0] h-[114px] w-[100%] fixed z-20">
-        <SPALOGOAPP/>
+        <SPALOGOMENUEDIT/>
         <Buttons />
         <SearchBar />
         <Navbar />
@@ -66,7 +66,7 @@ function SpaAppointmentPage() {
       <br></br>
       <br></br>
       
-      <Appointment />
+      <SPAEDITMENU />
       <br></br>
       <br></br>
       <Footer />
@@ -74,4 +74,4 @@ function SpaAppointmentPage() {
   );
 }
 
-export default SpaAppointmentPage;
+export default MenuEditPage;

@@ -1,15 +1,17 @@
-import React from "react";
-import SPALOGOCLAEDIT from "../components/SPA/SPALOGOCLAEDIT";
-import Buttons from "../components/Header/Buttons";
-import SearchBar from "../components/Header/SearchBar";
-import Navbar from "../components/Header/Navbar";
-import Footer from "../components/Footer/Footer";
-import CLASSICALEDIT from "../components/SPA/CLASSICALEDIT";
+import React from 'react'
+import SPALOGO from '../../components/SPA/SPALOGO'
+import Footer from '../../components/Footer/Footer'
+import SPAHOMEPAGE from '../../components/SPA/SPAHOMEPAGE'
+import Buttons from "../../components/Header/Buttons";
+import SearchBar from "../../components/Header/SearchBar";
+import Navbar from "../../components/Header/Navbar";
 
-function ClassicalEditPage() {
-  return (
-    <div>
-      <div>
+
+export default function SpaHomepage(){
+    return(
+        <div>
+            
+            <div>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -54,24 +56,24 @@ function ClassicalEditPage() {
           rel="stylesheet"
         />
       </div>
-      <div className="bg-[#A7F3D0] h-[114px] w-[100%] fixed z-20">
-        <SPALOGOCLAEDIT/>
+      <div className="bg-yellow h-[114px] w-[100%] fixed z-20">
+        <SPALOGO />
         <Buttons />
         <SearchBar />
         <Navbar />
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      
-      <CLASSICALEDIT />
-      <br></br>
-      <br></br>
-      <Footer />
-    </div>
-  );
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            
+            
+            <SPAHOMEPAGE/>
+            <br></br>
+            
+            <br></br>
+            <Footer/>
+        </div>
+        
+    )
 }
-
-export default ClassicalEditPage;
