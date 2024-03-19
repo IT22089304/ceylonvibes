@@ -5,7 +5,7 @@ import { Route, Router, Routes } from "react-router";
 import ShopInside from "./pages/shop/ShopInside.jsx";
 import Header from "./components/Header/Header.jsx";
 import { BrowserRouter } from "react-router-dom";
-import Reports from "./pages/Reports.jsx";
+
 import Products from "./pages/shop/Products.jsx";
 import axios from "axios";
 import Admin from "./Admin/Admin.jsx";
@@ -30,7 +30,15 @@ import ArtHistorical from "./pages/Art/ArtHistorical.jsx";
 import PaymentSuccess from "./pages/pay/Paymentsucess.jsx";
 import SlipUploaded from "./pages/pay/SlipUploaded.jsx";
 import Homepagee from "./pages/Hom/Homepagee.jsx";
-
+import SpaHomepage from "./pages/SpaHomepage.jsx";
+import AyurvedicPage from "./pages/AyurvedicSPAM.jsx";
+import ClassicalPage from "./pages/AyurvedicSPAC.jsx";
+import MenuEditPage from "./pages/SpaMenuEdit.jsx";
+import ClassicalEditPage from "./pages/ClassicalSpaEdit.jsx";
+import SpaAppointmentPage from "./pages/SpaServiceAppointment.jsx";
+import ServiceConfirmPage from "./pages/SpaServiceConfirm.jsx";
+import SPAADMINHOMEPAGE from "./pages/SpaAdminHomepage.jsx";
+import SPAREPORTGENERATIONPAGE from "./pages/SpaReportGeneration.jsx";
 
 const App = () => {
   console.disableYellowBox = true;
@@ -135,6 +143,20 @@ console.log(cart)
     <Route path="/home" element={<Homepagee />} /> 
     <Route path="/homee" element={<Homepagee />} /> 
     <Route path="/pay" element={<TotalBill />} /> 
+    <Route path="/SPAhome" element={<SpaHomepage />} /> 
+
+     {/* User-side routes */}
+     <Route path="/" element={<SpaHomepage />} />
+      <Route path="/ayurvedic-spa-menu" element={<AyurvedicPage />} />
+      <Route path="/ayurvedic-spa-classical" element={<ClassicalPage />} />
+      <Route path="/appoitment" element={<SpaAppointmentPage />} />
+      <Route path="/service-confirm" element={<ServiceConfirmPage />} />
+
+      {/* Admin-side routes */}
+      <Route path="/admin" element={<SPAADMINHOMEPAGE />} />
+      <Route path="/spa-menu-edit-service" element={<MenuEditPage />} />
+      <Route path="/classical-spa-rituals-edit-service" element={<ClassicalEditPage />} />
+      <Route path="/generate-report" element={<SPAREPORTGENERATIONPAGE />} />
 
 
     </Routes>

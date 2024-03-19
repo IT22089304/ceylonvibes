@@ -5,9 +5,11 @@ const HomePageBody = () => {
   return (
     <div className="flex flex-wrap justify-center">
       {/* SPA */}
+      <Link to="/SPAhome">
       <div className="w-64 h-64 bg-[#41C9E2] m-4 flex justify-center items-center">
         <span className="text-black text-3xl">SPA</span>
       </div>
+      </Link>
       {/* Payment */}
       <Link to="/pay">
       <div className="w-64 h-64 bg-[#41C9E2] m-4 flex justify-center items-center">
