@@ -19,17 +19,9 @@ import UpdateItemsCatagory from "./Admin/UpdateItemsCatagory.jsx";
 import { SignedIn, SignedOut, SignInButton, UserButton, UserProfile, ClerkProvider } from "@clerk/clerk-react";
 import SignInPage from "./components/Header/sign-in.jsx";
 import UserProfilePage  from "./components/Header/user-profile.jsx";
-import TotalBill from "./pages/pay/TotalBill.jsx";
-import Notification from "./pages/Noti/Notification.jsx";
-import CardPayment from "./pages/pay/CardPayment.jsx";
-import UploadSlip from "./pages/pay/UploadSlip.jsx";
-import PaymentAdmin from "./pages/pay/PaymentAdmin.jsx";
-import Eventpack from "./components/Bill/ddd.jsx";
-import ArtCatorgeries from "./pages/Art/ArtCatorgeries.jsx";
-import ArtHistorical from "./pages/Art/ArtHistorical.jsx";
-import PaymentSuccess from "./pages/pay/Paymentsucess.jsx";
-import SlipUploaded from "./pages/pay/SlipUploaded.jsx";
-import Homepagee from "./pages/Hom/Homepagee.jsx";
+import TotalBill from "./pages/TotalBill.jsx";
+import Notification from "./pages/Notification.jsx";
+import CardPayment from "./pages/CardPayment.jsx";
 
 
 const App = () => {
@@ -126,17 +118,9 @@ console.log(cart)
   return (    
     <BrowserRouter>
     <Routes>
-         
-    <Route path="/" element={<Homepagee />} />
-    <Route path="/checkout/card" element={<CardPayment />} />
-    <Route path="/checkout/slip" element={<UploadSlip />} />
-    <Route path="/success" element={<PaymentSuccess />} />
-    <Route path="/uploaded" element={<SlipUploaded />} /> 
-    <Route path="/home" element={<Homepagee />} /> 
-    <Route path="/homee" element={<Homepagee />} /> 
-    <Route path="/pay" element={<TotalBill />} /> 
-
-
+     
+    <Route path="/" element={<Notification />} />
+      
     </Routes>
   </BrowserRouter> 
    
