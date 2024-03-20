@@ -39,6 +39,11 @@ import SpaAppointmentPage from "./pages/SPA/SpaServiceAppointment.jsx";
 import ServiceConfirmPage from "./pages/SPA/SpaServiceConfirm.jsx";
 import SPAADMINHOMEPAGE from "./pages/SPA/SpaAdminHomepage.jsx";
 import SPAREPORTGENERATIONPAGE from "./pages/SPA/SpaReportGeneration.jsx";
+import Festival from "./components/Events/Festival.jsx";
+import Sport from "./components/Events/Sport.jsx";
+import Payment from "./components/Events/payment.jsx";
+import Food from "./components/Events/Food.jsx";
+import EventPage from "./pages/EventPage.jsx";
 
 const App = () => {
   console.disableYellowBox = true;
@@ -158,7 +163,11 @@ console.log(cart)
       <Route path="/classical-spa-rituals-edit-service" element={<ClassicalEditPage />} />
       <Route path="/generate-report" element={<SPAREPORTGENERATIONPAGE />} />
 
-
+      <Route path="/even" element={<EventPage />} />
+          <Route path="/Food" element={<Food />} />
+           <Route path="/Festival" element={<Festival/>}/> 
+           <Route path="/Sport" element={<Sport/>}/> 
+           <Route path="/Payment" element={<Payment/>}/> 
     </Routes>
   </BrowserRouter> 
    

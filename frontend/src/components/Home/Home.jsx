@@ -32,10 +32,12 @@ const HomePageBody = () => {
       <div className="w-64 h-64 bg-[#41C9E2] m-4 flex justify-center items-center">
         <span className="text-black text-3xl">Shop</span>
       </div>
-      {/* Events */}
+      {/* Events */} 
+      <Link to="/even">
       <div className="w-64 h-64 bg-[#41C9E2] m-4 flex justify-center items-center">
         <span className="text-black text-3xl">Events</span>
       </div>
+      </Link>
        {/* Events */}
        <Link to="/noti">
        <div className="w-64 h-64 bg-[#41C9E2] m-4 flex justify-center items-center">
