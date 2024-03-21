@@ -51,21 +51,7 @@ mongoDBURL.once("open", () => {
         console.log(`Server running on port ${port}`);
       });
 
-      let dbConnection;
       
-      export const connectToDb = (cb) => {
-        MongoClient.connect('mongodb+srv://root:root@ceylonvibes.dovkt4p.mongodb.net/ceylonVibes?retryWrites=true&w=majority')
-          .then((client) => {
-            dbConnection = client.db();
-            cb();
-          })
-          .catch((err) => {
-            console.log(err);
-            cb(err);
-          });
-      };
-      
-      export const getDb = () => dbConnection;
       
       // For image upload
       
