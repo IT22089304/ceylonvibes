@@ -6,9 +6,11 @@ import Footer from '../components/Footer/Footer'
 
 export default function EventPage() {
   return (
-    <div> 
+    
+    <div className="h-24 bg-[#eba5f1]"> 
 <EventHeader/>  
-        <div className='bg-[#F0CDEE] ' >
+<br/>
+        <div >
 
       
       </div>

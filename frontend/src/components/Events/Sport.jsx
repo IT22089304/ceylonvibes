@@ -53,22 +53,31 @@ function EventComponent() {
 
 function Sport() {
   return (
-    <div>
+    <div className="h-24 bg-[#eba5f1]"> 
       <EventHeader/>
+      <br/>
     <div className="pt-[100px] flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <div className="flex justify-center mb-4">
+       <Link to="/music3">
         <button className="bg-[#9d6262d3] text-Black font-bold py-2 px-4 rounded mr-4">
           Music Events
         </button>
+        </Link>
+        <Link to="/sport3">
         <button className="bg-[#381864d8] text-Black font-bold py-2 px-4 rounded mr-4">
           Sports Events
         </button>
+        </Link>
+        <Link to="/fes3">
         <button className="bg-[#9d6262d3] text-Black font-bold py-2 px-4 rounded mr-4">
           Festival Events
         </button>
+        </Link>
+        <Link to="/food3">
         <button className="bg-[#9d6262d3] text-Black font-bold py-2 px-4 rounded">
           Food Events
         </button>
+        </Link>
       </div>
       <EventComponent />
     </div>

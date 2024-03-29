@@ -29,9 +29,11 @@ const HomePageBody = () => {
         <span className="text-black text-3xl">Transport</span>
       </div>
       {/* Shop */}
+      <Link to="/shop">
       <div className="w-64 h-64 bg-[#41C9E2] m-4 flex justify-center items-center">
         <span className="text-black text-3xl">Shop</span>
       </div>
+      </Link>
       {/* Events */} 
       <Link to="/even">
       <div className="w-64 h-64 bg-[#41C9E2] m-4 flex justify-center items-center">

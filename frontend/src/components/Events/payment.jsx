@@ -84,15 +84,18 @@ const Payment = () => {
   };
 
   return (
-    <div>
+    <div className="h-24 bg-[#eba5f1]"> 
       <EventHeader/>
     <div>
       <div className="pt-[100px] container mx-auto py-8">
         <EventDetails event={event} />
       </div>
     </div>
+   
     <Footer/>
     </div>
+    
+
   );
 };
 

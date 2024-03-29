@@ -168,6 +168,37 @@ console.log(cart)
            <Route path="/Festival" element={<Festival/>}/> 
            <Route path="/Sport" element={<Sport/>}/> 
            <Route path="/Payment" element={<Payment/>}/> 
+           
+           <Route path="/fes3" element={<Festival/>}/> 
+           <Route path="/sport3" element={<Sport/>}/> 
+           <Route path="/music3" element={<EventPage/>}/> 
+           <Route path="/food3" element={<Food/>}/> 
+           
+           <Route path="/fes" element={<Festival/>}/> 
+           <Route path="/sport1" element={<Sport/>}/> 
+           <Route path="/music1" element={<EventPage/>}/> 
+           <Route path="/food1" element={<Food/>}/> 
+           
+           <Route path="/fes2" element={<Festival/>}/> 
+           <Route path="/sport2" element={<Sport/>}/> 
+           <Route path="/music2" element={<EventPage/>}/> 
+           <Route path="/food2" element={<Food/>}/> 
+           
+           <Route path="/shop" element={<Shop catagories={catagories} fetchCatagories={fetchCatagories} offers={offers} fetchOffers={fetchOffers} />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/shopInside/:id" element={<ShopInside nuts={nuts} fetchNuts={fetchNuts} snacks={snacks} fetchSnacks={fetchSnacks} sweetners={sweetners} fetchSweetners={fetchSweetners} fetchCartItems={fetchCart} cartItems={cart}/>}/>
+          <Route path="/sign-in" element={<SignInPage />} />
+          <Route path="/sign-up" element={<SignedOut />} />
+          <Route path="/profile" element={<UserProfilePage />} />
+
+          {/* <Route path="/" element={<Admin/>} /> */}
+          <Route path="/addCatagory" element={<AddCatagory fetchCatagories={fetchCatagories} />} />
+          <Route path="/updateCatagory/:id" element={<UpdateCatagory fetchCatagories={fetchCatagories} />} />
+          <Route path="/ItemsCatagory/:id" element={<ItemsCatagory />} />
+          <Route path="/addItemsCatagory" element={<AddItemsCatagory fetchItemsCatagory={fetchItemsCatagory} />} />
+          <Route path="/updateItemsCatagory/:id" element={<UpdateItemsCatagory fetchCatagories={fetchCatagories} />} />
+
+
     </Routes>
   </BrowserRouter> 
    
