@@ -44,7 +44,7 @@ import Sport from "./components/Events/Sport.jsx";
 import Payment from "./components/Events/payment.jsx";
 import Food from "./components/Events/Food.jsx";
 import EventPage from "./pages/EventPage.jsx";
-
+import Eventadmin from "./components/Events/EventAdmin.jsx";
 const App = () => {
   console.disableYellowBox = true;
 
@@ -158,7 +158,7 @@ console.log(cart)
       <Route path="/service-confirm" element={<ServiceConfirmPage />} />
 
       {/* Admin-side routes */}
-      <Route path="/admin" element={<SPAADMINHOMEPAGE />} />
+      <Route path="/admin" element={<Eventadmin />} />
       <Route path="/spa-menu-edit-service" element={<MenuEditPage />} />
       <Route path="/classical-spa-rituals-edit-service" element={<ClassicalEditPage />} />
       <Route path="/generate-report" element={<SPAREPORTGENERATIONPAGE />} />

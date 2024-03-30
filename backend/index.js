@@ -40,18 +40,20 @@ app.post('/slip',async (request,response)=>{
     }
 
 });
+
 //get all slips
 app.get('/slip', async (request, response) =>{
     try{
         const slip= await Slip.find({});
 
-        return response.Status(200).json(slip);
+        return response.status(200).json(slip);
         
     }catch (error){
-        console.log(error.massage);
-        
+        console.log(error.massage);      
     }
 })
+
+
 mongoose
 .connect(mongoDBURL)
 .then(()=>
