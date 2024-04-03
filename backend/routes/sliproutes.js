@@ -3,18 +3,23 @@ import { Slip } from "../models/slipmodel.js";
 
 const sliprouter = express.Router();
 
-// Save slip
+// Save slip with image
 sliprouter.post('/', async (request, response) => {
     try {
-        if (!request.body.title || !request.body.author || !request.body.publishYear) {
+        if (!request.body.title || !request.body.author || !request.body.publishYear || !request.body.image) {
             return response.status(400).send({
-                message: 'Send all req',
+                message: 'Send all required fields including image',
             });
         }
+
         const newSlip = {
             title: request.body.title,
             author: request.body.author,
             publishYear: request.body.publishYear,
+            image: {
+                data: request.body.image.data,
+                contentType: request.body.image.contentType
+            }
         };
 
         const slip = await Slip.create(newSlip);
@@ -50,14 +55,27 @@ sliprouter.get('/:id', async (request, response) => {
     }
 });
 
-// Update a slip by ID
+// Update a slip by ID with image
 sliprouter.put('/:id', async (request, response) => {
     try {
-        const slip = await Slip.findByIdAndUpdate(request.params.id, request.body, { new: true });
-        if (!slip) {
+        const slipToUpdate = await Slip.findById(request.params.id);
+        if (!slipToUpdate) {
             return response.status(404).json({ message: 'Slip not found' });
         }
-        return response.status(200).json(slip);
+
+        slipToUpdate.title = request.body.title || slipToUpdate.title;
+        slipToUpdate.author = request.body.author || slipToUpdate.author;
+        slipToUpdate.publishYear = request.body.publishYear || slipToUpdate.publishYear;
+        
+        if (request.body.image) {
+            slipToUpdate.image = {
+                data: request.body.image.data,
+                contentType: request.body.image.contentType
+            };
+        }
+
+        const updatedSlip = await slipToUpdate.save();
+        return response.status(200).json(updatedSlip);
     } catch (error) {
         console.log(error.message);
         return response.status(500).json({ message: 'Server Error' });

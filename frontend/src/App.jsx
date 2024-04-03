@@ -5,7 +5,7 @@ import { Route, Router, Routes } from "react-router";
 import ShopInside from "./pages/shop/ShopInside.jsx";
 import Header from "./components/Header/Header.jsx";
 import { BrowserRouter } from "react-router-dom";
-
+import InsertSlipS from "./components/Insert.jsx";
 import Products from "./pages/shop/Products.jsx";
 import axios from "axios";
 import Admin from "./Admin/Admin.jsx";
@@ -45,6 +45,7 @@ import Payment from "./components/Events/payment.jsx";
 import Food from "./components/Events/Food.jsx";
 import EventPage from "./pages/EventPage.jsx";
 import Eventadmin from "./components/Events/EventAdmin.jsx";
+import InsertSlip from "./components/Insert.jsx";
 const App = () => {
   console.disableYellowBox = true;
 
@@ -137,71 +138,71 @@ console.log(cart)
 
   
   return (    
-    <BrowserRouter>
-    <Routes>
+  //   <BrowserRouter>
+  //   <Routes>
          
-    <Route path="/" element={<Homepagee />} />
-    <Route path="/checkout/card" element={<CardPayment />} />
-    <Route path="/checkout/slip" element={<UploadSlip />} />
-    <Route path="/success" element={<PaymentSuccess />} />
-    <Route path="/uploaded" element={<SlipUploaded />} /> 
-    <Route path="/home" element={<Homepagee />} /> 
-    <Route path="/homee" element={<Homepagee />} /> 
-    <Route path="/pay" element={<TotalBill />} /> 
-    <Route path="/SPAhome" element={<SpaHomepage />} /> 
-    <Route path="/noti" element={<Notification />} /> 
+  //   <Route path="/" element={<Homepagee />} />
+  //   <Route path="/checkout/card" element={<CardPayment />} />
+  //   <Route path="/checkout/slip" element={<UploadSlip />} />
+  //   <Route path="/success" element={<PaymentSuccess />} />
+  //   <Route path="/uploaded" element={<SlipUploaded />} /> 
+  //   <Route path="/home" element={<Homepagee />} /> 
+  //   <Route path="/homee" element={<Homepagee />} /> 
+  //   <Route path="/pay" element={<TotalBill />} /> 
+  //   <Route path="/SPAhome" element={<SpaHomepage />} /> 
+  //   <Route path="/noti" element={<Notification />} /> 
      
-     <Route path="/" element={<SpaHomepage />} />
-      <Route path="/ayurvedic-spa-menu" element={<AyurvedicPage />} />
-      <Route path="/ayurvedic-spa-classical" element={<ClassicalPage />} />
-      <Route path="/appoitment" element={<SpaAppointmentPage />} />
-      <Route path="/service-confirm" element={<ServiceConfirmPage />} />
+  //    <Route path="/" element={<SpaHomepage />} />
+  //     <Route path="/ayurvedic-spa-menu" element={<AyurvedicPage />} />
+  //     <Route path="/ayurvedic-spa-classical" element={<ClassicalPage />} />
+  //     <Route path="/appoitment" element={<SpaAppointmentPage />} />
+  //     <Route path="/service-confirm" element={<ServiceConfirmPage />} />
 
-      {/* Admin-side routes */}
-      <Route path="/admin" element={<SPAADMINHOMEPAGE />} />
-      <Route path="/spa-menu-edit-service" element={<MenuEditPage />} />
-      <Route path="/classical-spa-rituals-edit-service" element={<ClassicalEditPage />} />
-      <Route path="/generate-report" element={<SPAREPORTGENERATIONPAGE />} />
+  //     {/* Admin-side routes */}
+  //     <Route path="/admin" element={<SPAADMINHOMEPAGE />} />
+  //     <Route path="/spa-menu-edit-service" element={<MenuEditPage />} />
+  //     <Route path="/classical-spa-rituals-edit-service" element={<ClassicalEditPage />} />
+  //     <Route path="/generate-report" element={<SPAREPORTGENERATIONPAGE />} />
 
-      <Route path="/even" element={<EventPage />} />
-          <Route path="/Food" element={<Food />} />
-           <Route path="/Festival" element={<Festival/>}/> 
-           <Route path="/Sport" element={<Sport/>}/> 
-           <Route path="/Payment" element={<Payment/>}/> 
+  //     <Route path="/even" element={<EventPage />} />
+  //         <Route path="/Food" element={<Food />} />
+  //          <Route path="/Festival" element={<Festival/>}/> 
+  //          <Route path="/Sport" element={<Sport/>}/> 
+  //          <Route path="/Payment" element={<Payment/>}/> 
            
-           <Route path="/fes3" element={<Festival/>}/> 
-           <Route path="/sport3" element={<Sport/>}/> 
-           <Route path="/music3" element={<EventPage/>}/> 
-           <Route path="/food3" element={<Food/>}/> 
+  //          <Route path="/fes3" element={<Festival/>}/> 
+  //          <Route path="/sport3" element={<Sport/>}/> 
+  //          <Route path="/music3" element={<EventPage/>}/> 
+  //          <Route path="/food3" element={<Food/>}/> 
            
-           <Route path="/fes" element={<Festival/>}/> 
-           <Route path="/sport1" element={<Sport/>}/> 
-           <Route path="/music1" element={<EventPage/>}/> 
-           <Route path="/food1" element={<Food/>}/> 
+  //          <Route path="/fes" element={<Festival/>}/> 
+  //          <Route path="/sport1" element={<Sport/>}/> 
+  //          <Route path="/music1" element={<EventPage/>}/> 
+  //          <Route path="/food1" element={<Food/>}/> 
            
-           <Route path="/fes2" element={<Festival/>}/> 
-           <Route path="/sport2" element={<Sport/>}/> 
-           <Route path="/music2" element={<EventPage/>}/> 
-           <Route path="/food2" element={<Food/>}/> 
+  //          <Route path="/fes2" element={<Festival/>}/> 
+  //          <Route path="/sport2" element={<Sport/>}/> 
+  //          <Route path="/music2" element={<EventPage/>}/> 
+  //          <Route path="/food2" element={<Food/>}/> 
            
-           <Route path="/shop" element={<Shop catagories={catagories} fetchCatagories={fetchCatagories} offers={offers} fetchOffers={fetchOffers} />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/shopInside/:id" element={<ShopInside nuts={nuts} fetchNuts={fetchNuts} snacks={snacks} fetchSnacks={fetchSnacks} sweetners={sweetners} fetchSweetners={fetchSweetners} fetchCartItems={fetchCart} cartItems={cart}/>}/>
-          <Route path="/sign-in" element={<SignInPage />} />
-          <Route path="/sign-up" element={<SignedOut />} />
-          <Route path="/profile" element={<UserProfilePage />} />
+  //          <Route path="/shop" element={<Shop catagories={catagories} fetchCatagories={fetchCatagories} offers={offers} fetchOffers={fetchOffers} />} />
+  //         <Route path="/products" element={<Products />} />
+  //         <Route path="/shopInside/:id" element={<ShopInside nuts={nuts} fetchNuts={fetchNuts} snacks={snacks} fetchSnacks={fetchSnacks} sweetners={sweetners} fetchSweetners={fetchSweetners} fetchCartItems={fetchCart} cartItems={cart}/>}/>
+  //         <Route path="/sign-in" element={<SignInPage />} />
+  //         <Route path="/sign-up" element={<SignedOut />} />
+  //         <Route path="/profile" element={<UserProfilePage />} />
 
-          {/* <Route path="/" element={<Admin/>} /> */}
-          <Route path="/addCatagory" element={<AddCatagory fetchCatagories={fetchCatagories} />} />
-          <Route path="/updateCatagory/:id" element={<UpdateCatagory fetchCatagories={fetchCatagories} />} />
-          <Route path="/ItemsCatagory/:id" element={<ItemsCatagory />} />
-          <Route path="/addItemsCatagory" element={<AddItemsCatagory fetchItemsCatagory={fetchItemsCatagory} />} />
-          <Route path="/updateItemsCatagory/:id" element={<UpdateItemsCatagory fetchCatagories={fetchCatagories} />} />
+  //         {/* <Route path="/" element={<Admin/>} /> */}
+  //         <Route path="/addCatagory" element={<AddCatagory fetchCatagories={fetchCatagories} />} />
+  //         <Route path="/updateCatagory/:id" element={<UpdateCatagory fetchCatagories={fetchCatagories} />} />
+  //         <Route path="/ItemsCatagory/:id" element={<ItemsCatagory />} />
+  //         <Route path="/addItemsCatagory" element={<AddItemsCatagory fetchItemsCatagory={fetchItemsCatagory} />} />
+  //         <Route path="/updateItemsCatagory/:id" element={<UpdateItemsCatagory fetchCatagories={fetchCatagories} />} />
 
 
-    </Routes>
-  </BrowserRouter> 
-   
+  //   </Routes>
+  // </BrowserRouter> 
+   <InsertSlip/>
   );
 };
 export default App;

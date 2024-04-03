@@ -15,6 +15,7 @@ app.get('/', (request, response) => {
 app.use('/slip', sliprouter);
 app.use('/pay', payrouter);
 
+
 mongoose
     .connect(mongoDBURL)
     .then(() => {
