@@ -24,7 +24,6 @@ function SpaAdminHP() {
      <h3 className="text-2xl text-gray-800 mb-12 line-height-2rem">
         Browse through the menu of our Ceylon Vibes SPA in Kandy to discover the treatment that best suits you
       </h3>
-      
 
       <div className="flex justify-center spa-categories grid grid-cols-1 gap-8"></div>
 
@@ -52,7 +51,8 @@ function SpaAdminHP() {
             <Link to="/spa-menu-edit-service"> {/* Link to the edit-service */}
             <button className="bg-[#059669] hover:bg-[#065F46] text-white font-bold py-2 px-4 rounded transition duration-200">
               Edit Services
-            </button></Link>
+            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -86,5 +86,6 @@ function SpaAdminHP() {
     </div>
   );
 }
+
 
 export default SpaAdminHP;

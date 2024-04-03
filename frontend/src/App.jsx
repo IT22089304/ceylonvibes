@@ -158,7 +158,7 @@ console.log(cart)
       <Route path="/service-confirm" element={<ServiceConfirmPage />} />
 
       {/* Admin-side routes */}
-      <Route path="/admin" element={<Eventadmin />} />
+      <Route path="/admin" element={<SPAADMINHOMEPAGE />} />
       <Route path="/spa-menu-edit-service" element={<MenuEditPage />} />
       <Route path="/classical-spa-rituals-edit-service" element={<ClassicalEditPage />} />
       <Route path="/generate-report" element={<SPAREPORTGENERATIONPAGE />} />

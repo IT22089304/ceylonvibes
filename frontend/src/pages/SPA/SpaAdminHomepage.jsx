@@ -6,7 +6,6 @@ import Buttons from "../../components/Header/Buttons";
 import SearchBar from "../../components/Header/SearchBar";
 import Navbar from "../../components/Header/Navbar";
 
-
 export default function SPAADMINHOMEPAGE(){
     return(
         <div>

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Events = [
   {
     topic: "Trekking and Hiking",
-    image:sport1, // Using the imported image correctly
+    image:sport1, 
     description: "With multitude of roads winding through expanding mountains, lush green forests, paddy fields, parks and sleepy villages, Sri Lanka offers a plethora of opportunities to the Keen hikers and trekkers. The highlands of Sri Lanka with virgin rain forests, sacred mountains, lush tea gardens and plains filled with rare birds and insects coupled with mild temperatures and welcoming smiles of the villagers provide the ideal setting to an unforgettable walking experience.",
   },
   {
