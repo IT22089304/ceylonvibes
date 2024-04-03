@@ -1,74 +1,28 @@
 import express from "express";
-import { PORT ,mongoDBURL} from "./config.js";
 import mongoose from "mongoose";
-import {  Slip } from "./models/slipmodel.js";
-
-
+import { PORT, mongoDBURL } from "./config.js";
+import sliprouter from "./routes/sliproutes.js";
+import payrouter from "./routes/paymentroute.js";
 const app = express();
 app.use(express.json());
 
-app.get('/',(request,response)=>{
-
+app.get('/', (request, response) => {
     console.log(request);
     return response.status(234).send('welcome ');
 });
 
-//save slip
-app.post('/slip',async (request,response)=>{
-    try {
-        if(
-            !request.body.title ||
-            !request.body.author ||
-            !request.body.publishYear
-        )
-        {
-            return response.status(400).send({
-                message:'Send all req',
-            });
-        }
-        const newSlip={
-            title:request.body.title,
-            author:request.body.author,
-            publishYear:request.body.publishYear,
-        };
-
-        const slip =await Slip.create(newSlip);
-        return response.status(201).send(slip);
-        
-    } catch (error) {
-        console.log('sss');
-    }
-
-});
-
-//get all slips
-app.get('/slip', async (request, response) =>{
-    try{
-        const slip= await Slip.find({});
-
-        return response.status(200).json(slip);
-        
-    }catch (error){
-        console.log(error.massage);      
-    }
-})
-
+// Use slip and pay routes
+app.use('/slip', sliprouter);
+app.use('/pay', payrouter);
 
 mongoose
-.connect(mongoDBURL)
-.then(()=>
-    {
-console.log('App is connected');
-
-app.listen(PORT, ()=>{
-    console.log(`App is listining ${PORT}`);
-    });
+    .connect(mongoDBURL)
+    .then(() => {
+        console.log('App is connected');
+        app.listen(PORT, () => {
+            console.log(`App is listening ${PORT}`);
+        });
     })
-
-.catch((error)=>
-     {
-            console.log('Error');
+    .catch((error) => {
+        console.log('Error:', error);
     });
-
-
-
