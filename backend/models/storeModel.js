@@ -6,14 +6,16 @@ const catagorySchema = new Schema(
   {
     name: {
       type: String,
+      required: true,
     },
     image: {
       type: String,
+      required: true,
     },
   },
 );
 
-export const Catagory = mongoose.model("catagory", catagorySchema);
+export const Catagory = mongoose.model("newcatagories", catagorySchema);
 
 const productsSchema = new Schema({  
   name: {
@@ -28,10 +30,16 @@ const productsSchema = new Schema({
   image: {
     type: String,
   },
-  imageFolder: {
+  type: {
     type: String,
   },
-  type: {
+  quantity: {
+    type: Number,
+  },
+  nameDesc: {
+    type: String,
+  },
+  Desc: {
     type: String,
   },
 });
@@ -65,3 +73,14 @@ const ItemsSchema = new Schema({
 });
 
 export const List = mongoose.model("items", ItemsSchema);
+
+const cartSchema = new Schema({
+  userID: {
+    type: String,
+  },
+  products: {
+    type: String,
+  },
+});
+
+export const Cart = mongoose.model("Productcarts", cartSchema);
